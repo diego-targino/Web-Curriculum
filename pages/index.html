@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../css/baseStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../css/home.css" />
+    <script
+      src="https://kit.fontawesome.com/36a9c9d5e0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="navbar" id="myNavbar">
+      <a href="#" id="icon" class="icon">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#" class="selected">Home</a>
+      <a href="./curriculum.html">Currículo</a>
+      <a href="./portfolio.html">Portifólio</a>
+      <a href="./contact.html">Contato</a>
+    </div>
+    <div class="pageScope">
+      <div class="content">
+        <div class="row">
+          <div class="left-text">
+            <h3>Sobre mim...</h3>
+            <p>
+              Desenvolvedor back-end e entusiasta em front-end, tenho interesse
+              por novas tecnologias e linguagens. Tenho como linguagem principal
+              C#, mas tenho experiência com javascript, typescript, python entre
+              outras. Universitário e programador há dois anos, me divertir com
+              o que faço é o que me motiva a continuar nessa jornada.
+            </p>
+          </div>
+          <div class="button-box">
+            <a href="./curriculum.html">
+              <button class="see-more-button" type="button">Saiba Mais</button>
+            </a>
+            <a href="./contact.html">
+              <button class="contact-button" type="button">
+                Entre em Contato
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024
+          <a
+            class="github-link"
+            target="”_blank”"
+            href="https://github.com/diego-targino"
+            >diego-targino</a
+          >. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("icon").onclick = () => {
+        let itens = document.querySelectorAll("#myNavbar a");
+
+        itens.forEach(function (item) {
+          if (
+            document.documentElement.clientWidth <= 600 &&
+            item.id != "icon"
+          ) {
+            if (item.classList.contains("navbar-item-active")) {
+              item.classList.remove("navbar-item-active");
+              document
+                .querySelector("#myNavbar")
+                .classList.remove(".navbar-active");
+              document.querySelector(".icon").classList.remove("icon-active");
+            } else {
+              item.classList.add("navbar-item-active");
+              document
+                .querySelector("#myNavbar")
+                .classList.add(".navbar-active");
+
+              document.querySelector(".icon").classList.add("icon-active");
+            }
+          }
+        });
+      };
+    </script>
+  </body>
+</html>

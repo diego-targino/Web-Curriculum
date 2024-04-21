@@ -1,0 +1,40 @@
+.project-container {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 27px !important;
+  color: whitesmoke;
+  margin: 0;
+}
+
+.sub-titles {
+  font-size: 24px;
+  font-weight: 700;
+  color: whitesmoke;
+  text-align: justify;
+}
+
+.text-value {
+  font-size: 18px;
+  color: rgb(156, 153, 207);
+  padding-left: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .text-value {
+    padding-left: 0px;
+  }
+
+  .project-title {
+    text-align: center;
+  }
+
+  .sub-titles {
+    text-align: center;
+  }
+}

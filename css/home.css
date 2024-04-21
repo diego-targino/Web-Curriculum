@@ -1,0 +1,85 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4%;
+  row-gap: 1em;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.left-text {
+  display: flex;
+  color: aliceblue;
+  max-width: 50%;
+  flex-direction: column;
+}
+
+.left-text p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+  color: whitesmoke;
+}
+
+.rigth-image {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+
+.rigth-image img {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  padding-top: 1.5em;
+}
+
+.button-box button {
+  width: 125px;
+  height: 35px;
+  border: none;
+}
+
+.contact-button {
+  background-color: rgb(98, 92, 177);
+  color: whitesmoke;
+}
+
+.see-more-button {
+  background-color: whitesmoke;
+  color: rgb(98, 92, 177);
+}
+
+@media screen and (max-width: 600px) {
+  .pageScope {
+    padding: 0.5em 0;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+
+  .left-text {
+    min-width: 100%;
+  }
+
+  .rigth-image {
+    width: 100%;
+  }
+
+  .left-text p {
+    text-align: justify;
+  }
+}
